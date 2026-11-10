@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="LiveScore Central — sports scores, schedules and standings.">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/styles.css">
+  <title>LiveScore Central</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">LS</span><span>LiveScore <b>Central</b></span></a>
+    <button id="accountButton" class="outline-button">Sign in</button>
+  </header>
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">EVERY GAME. ONE PLACE.</p>
+        <h1>Stay in the game.</h1>
+        <p class="hero-copy">Scores, schedules and your favorite teams — all in one place.</p>
+      </div>
+      <div class="membership">
+        <span class="plan-label">ANNUAL PREMIUM</span>
+        <div class="price">$9.99 <small>/ year</small></div>
+        <p>7 days free, then billed annually. Cancel anytime.</p>
+        <button id="trialButton" class="primary-button">Start 7-day free trial</button>
+        <small class="fine-print">Payment details and renewal terms will be shown securely at checkout.</small>
+      </div>
+    </section>
+
+    <nav class="league-tabs" aria-label="Choose a sport" id="leagueTabs">
+      <button class="league-tab active" data-league="all">All sports</button>
+      <button class="league-tab" data-league="NFL">NFL</button>
+      <button class="league-tab" data-league="NBA">NBA</button>
+      <button class="league-tab" data-league="MLB">MLB</button>
+      <button class="league-tab" data-league="NHL">NHL</button>
+      <button class="league-tab" data-league="NCAAF">College football</button>
+      <button class="league-tab" data-league="NCAAB">College basketball</button>
+      <button class="league-tab" data-league="Soccer">Soccer</button>
+    </nav>
+
+    <section class="section-heading">
+      <div><p class="eyebrow">SCOREBOARD</p><h2 id="scoreHeading">Today's games</h2></div>
+      <div class="update-status"><span class="pulse"></span><span id="updateText">Demo scores</span></div>
+    </section>
+    <div id="scoreGrid" class="score-grid" aria-live="polite"></div>
+    <p class="data-note" id="dataNote">Preview mode: sample scores are shown. Connect a commercially licensed live sports data feed before launching to customers.</p>
+
+    <section class="features">
+      <article><span class="feature-icon">↻</span><h3>Automatic updates</h3><p>Scoreboards refresh automatically while the app is open.</p></article>
+      <article><span class="feature-icon">☆</span><h3>Your teams</h3><p>Keep the teams you follow close at hand.</p></article>
+      <article><span class="feature-icon">▤</span><h3>Schedules & standings</h3><p>See what's coming up and how teams are doing.</p></article>
+    </section>
+    <section class="bottom-cta">
+      <p class="eyebrow">ONE SIMPLE MEMBERSHIP</p>
+      <h2>All your sports. One low price.</h2>
+      <p>Try it free for 7 days, then just $9.99 per year.</p>
+      <button id="trialButtonBottom" class="primary-button">Start your free trial</button>
+    </section>
+  </main>
+  <footer><span>© <span id="year"></span> LiveScore Central</span><span>Scores and schedules subject to data-provider availability.</span></footer>
+  <dialog id="messageDialog">
+    <div class="dialog-inner"><button class="dialog-close" id="closeDialog" aria-label="Close">×</button><p class="eyebrow">LIVE SCORE CENTRAL</p><h2 id="dialogTitle">Coming soon</h2><p id="dialogMessage"></p><button class="primary-button" id="dialogOk">Got it</button></div>
+  </dialog>
+  <script src="/app.js"></script>
+</body>
+</html>

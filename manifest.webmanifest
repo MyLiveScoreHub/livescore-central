@@ -1,0 +1,9 @@
+{
+  "name": "LiveScore Central",
+  "short_name": "LiveScore",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#101827",
+  "description": "Sports scores, schedules and favorite teams."
+}
