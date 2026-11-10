@@ -77,4 +77,4 @@ $("dialogOk").addEventListener("click",()=>$("messageDialog").close());
 $("year").textContent = new Date().getFullYear();
 refreshScores();
 refreshTimer = setInterval(refreshScores,30000);
-if ("serviceWorker" in navigator) window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{}));
+if ("serviceWorker" in navigator) window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));)=>{}));" in navigator) window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{}));
